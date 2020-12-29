@@ -8,7 +8,7 @@ import {
 
 import NavFooter from './components/nav/nav-footer';
 
-const App = () => (
+const App: FC = () => (
   <SafeAreaView style={styles.contentWrapper}>
       <View>
         <Text style={styles.header}>

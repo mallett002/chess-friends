@@ -1,16 +1,52 @@
-import React from 'react';
+import React, {FC} from 'react';
 import {
   View,
   Text,
   StyleSheet
 } from 'react-native';
 
-const NavFooter = () => (
+import NavItem from './nav-item';
+
+interface navItem {
+  icon: string // FC
+  navigationLink: string
+  text: string
+}
+
+const navItems: [navItem] = [
+  {
+    icon: 'some-icon',
+    navigationLink: 'hi',
+    text: 'HOME'
+  },
+  {
+    icon: 'some-icon',
+    navigationLink: 'hi',
+    text: 'GAMES'
+  },
+  {
+    icon: 'some-icon',
+    navigationLink: 'hi',
+    text: 'CHAT'
+  },
+  {
+    icon: 'some-icon',
+    navigationLink: 'hi',
+    text: 'PROFILE'
+  },
+];
+
+const NavFooter: FC = () => (
   <View style={styles.navContainer}>
-    <View><Text style={styles.navItem}>HomeIcon</Text></View>
-    <View><Text style={styles.navItem}>GamesIcon</Text></View>
-    <View><Text style={styles.navItem}>ChatIcon</Text></View>
-    <View><Text style={styles.navItem}>ProfileIcon</Text></View>
+    {navItems.map((item) =>
+      <NavItem
+        key={item.text}
+        navigationLink={item.navigationLink}
+        text={item.text}
+      >
+        {item.icon}
+      </NavItem>
+    )}
   </View>
 );
 
