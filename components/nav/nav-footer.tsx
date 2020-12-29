@@ -13,7 +13,7 @@ interface navItem {
   text: string
 }
 
-const navItems: [navItem] = [
+const navItems: navItem[] = [
   {
     icon: 'some-icon',
     navigationLink: 'hi',
