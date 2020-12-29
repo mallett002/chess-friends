@@ -18,7 +18,9 @@ const styles = StyleSheet.create({
   navContainer: {
     display: 'flex',
     flexDirection: 'row',
-    //TODO: alignSelf? something like that to put at end
+    position: 'absolute',
+    bottom: 0,
+    marginBottom: 20
   },
   navItem: {
     padding: 10,
