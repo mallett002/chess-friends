@@ -4,13 +4,17 @@ import { View, Text } from 'react-native';
 interface navItemProps {
   navigationLink: string
   text: string
-  children: string
+  children: FC
 }
 
 const NavItem: FC<navItemProps> = (props) => {
+  const Icon = props.children;
+  console.log({icon: Icon});
+  
+
   return (
     <View>
-      <Text>{props.children}</Text>
+      <Icon />
       <Text>{props.text}</Text>
     </View>
   );

@@ -5,32 +5,34 @@ import {
   StyleSheet
 } from 'react-native';
 
+import { ArrowUpCircle } from "react-native-feather";
+
 import NavItem from './nav-item';
 
 interface navItem {
-  icon: string // FC
+  icon: FC
   navigationLink: string
   text: string
 }
 
 const navItems: navItem[] = [
   {
-    icon: 'some-icon',
+    icon: ArrowUpCircle,
     navigationLink: 'hi',
     text: 'HOME'
   },
   {
-    icon: 'some-icon',
+    icon: ArrowUpCircle,
     navigationLink: 'hi',
     text: 'GAMES'
   },
   {
-    icon: 'some-icon',
+    icon: ArrowUpCircle,
     navigationLink: 'hi',
     text: 'CHAT'
   },
   {
-    icon: 'some-icon',
+    icon: ArrowUpCircle,
     navigationLink: 'hi',
     text: 'PROFILE'
   },
