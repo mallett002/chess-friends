@@ -7,7 +7,7 @@ import {
 import NavItem from './nav-item';
 
 interface navItem {
-  icon: FC
+  iconName: string
   navigationLink: string
   text: string
 }
