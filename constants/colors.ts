@@ -1,0 +1,1 @@
+export const DARK_GREY: string = '#4b4949';

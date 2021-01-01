@@ -1,21 +1,25 @@
 import React, { FC } from 'react';
 import { View, Text } from 'react-native';
+// @ts-ignore
+import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
+
+import {DARK_GREY} from '../../constants/colors';
 
 interface navItemProps {
   navigationLink: string
   text: string
-  children: FC
+  name: string
 }
 
-const NavItem: FC<navItemProps> = (props) => {
-  const Icon = props.children;
-  console.log({icon: Icon});
-  
-
+const NavItem: FC<navItemProps> = ({name, text, navigationLink}) => {
   return (
     <View>
-      <Icon />
-      <Text>{props.text}</Text>
+      <FontAwesome5
+        name={name}
+        size={50}
+        color={DARK_GREY}
+      />
+      <Text>{text}</Text>
     </View>
   );
 }

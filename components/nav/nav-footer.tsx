@@ -1,11 +1,8 @@
 import React, {FC} from 'react';
 import {
   View,
-  Text,
   StyleSheet
-} from 'react-native';
-
-import { ArrowUpCircle } from "react-native-feather";
+} from 'react-native';  
 
 import NavItem from './nav-item';
 
@@ -17,22 +14,22 @@ interface navItem {
 
 const navItems: navItem[] = [
   {
-    icon: ArrowUpCircle,
+    iconName: 'home',
     navigationLink: 'hi',
     text: 'HOME'
   },
   {
-    icon: ArrowUpCircle,
+    iconName: 'home',
     navigationLink: 'hi',
     text: 'GAMES'
   },
   {
-    icon: ArrowUpCircle,
+    iconName: 'home',
     navigationLink: 'hi',
     text: 'CHAT'
   },
   {
-    icon: ArrowUpCircle,
+    iconName: 'home',
     navigationLink: 'hi',
     text: 'PROFILE'
   },
@@ -45,9 +42,8 @@ const NavFooter: FC = () => (
         key={item.text}
         navigationLink={item.navigationLink}
         text={item.text}
-      >
-        {item.icon}
-      </NavItem>
+        name={item.iconName}
+      />
     )}
   </View>
 );
