@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
 import { View, Text } from 'react-native';
 // @ts-ignore
-import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
+import Feather from 'react-native-vector-icons/Feather';
 
 import {DARK_GREY} from '../../constants/colors';
 
@@ -14,7 +14,7 @@ interface navItemProps {
 const NavItem: FC<navItemProps> = ({name, text, navigationLink}) => {
   return (
     <View>
-      <FontAwesome5
+      <Feather
         name={name}
         size={50}
         color={DARK_GREY}

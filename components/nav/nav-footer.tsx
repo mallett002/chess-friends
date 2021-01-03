@@ -5,6 +5,7 @@ import {
 } from 'react-native';  
 
 import NavItem from './nav-item';
+import {LIGHT_GREY} from '../../constants/colors';
 
 interface navItem {
   iconName: string
@@ -19,17 +20,17 @@ const navItems: navItem[] = [
     text: 'HOME'
   },
   {
-    iconName: 'home',
+    iconName: 'activity',
     navigationLink: 'hi',
     text: 'GAMES'
   },
   {
-    iconName: 'home',
+    iconName: 'message-circle',
     navigationLink: 'hi',
     text: 'CHAT'
   },
   {
-    iconName: 'home',
+    iconName: 'user',
     navigationLink: 'hi',
     text: 'PROFILE'
   },
@@ -52,9 +53,14 @@ const styles = StyleSheet.create({
   navContainer: {
     display: 'flex',
     flexDirection: 'row',
+    justifyContent: 'space-between',
+    width: '100%',
+    padding: 8,
+    paddingHorizontal: 18,
+    borderTopWidth: 1,
+    borderTopColor: LIGHT_GREY,
     position: 'absolute',
-    bottom: 0,
-    marginBottom: 20
+    bottom: 0
   },
   navItem: {
     padding: 10,
