@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import { View, Text } from 'react-native';
+import {View, Text, StyleSheet} from 'react-native';
 // @ts-ignore
 import Feather from 'react-native-vector-icons/Feather';
 
@@ -13,7 +13,7 @@ interface navItemProps {
 
 const NavItem: FC<navItemProps> = ({name, text, navigationLink}) => {
   return (
-    <View>
+    <View style={styles.navItemContainer}>
       <Feather
         name={name}
         size={50}
@@ -23,5 +23,12 @@ const NavItem: FC<navItemProps> = ({name, text, navigationLink}) => {
     </View>
   );
 }
+
+const styles = StyleSheet.create({
+  navItemContainer: {
+    display: 'flex',
+    alignItems: 'center'
+  }
+});
 
 export default NavItem;

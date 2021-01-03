@@ -66,6 +66,6 @@ const styles = StyleSheet.create({
     padding: 10,
     paddingTop: 20
   }
-})
+});
 
 export default NavFooter;
