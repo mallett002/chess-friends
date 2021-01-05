@@ -3,13 +3,20 @@ import {
   SafeAreaView,
   StyleSheet,
   Text,
+  View
 } from 'react-native';
 
-const App:FC = () => (
+import NavFooter from './components/nav/nav-footer';
+
+const App: FC = () => (
   <SafeAreaView style={styles.contentWrapper}>
-    <Text style={styles.header}>
-      Welcome to Chess Friends!
-    </Text>
+      <View>
+        <Text style={styles.header}>
+          Welcome to Chess Friends!
+      </Text>
+        <Text>Some other content</Text>
+      </View>
+    <NavFooter />
   </SafeAreaView>
 );
 
@@ -17,7 +24,8 @@ const styles = StyleSheet.create({
   contentWrapper: {
     display: "flex",
     alignItems: "center",
-    paddingTop: 10
+    paddingTop: 10,
+    flex: 1
   },
   header: {
     fontSize: 24
