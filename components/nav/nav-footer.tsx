@@ -16,22 +16,22 @@ interface navItem {
 const navItems: navItem[] = [
   {
     iconName: 'home',
-    navigationLink: 'hi',
+    navigationLink: 'Home',
     text: 'HOME'
   },
   {
     iconName: 'activity',
-    navigationLink: 'hi',
+    navigationLink: 'Games',
     text: 'GAMES'
   },
   {
     iconName: 'message-circle',
-    navigationLink: 'hi',
+    navigationLink: 'Chat',
     text: 'CHAT'
   },
   {
     iconName: 'user',
-    navigationLink: 'hi',
+    navigationLink: 'Profile',
     text: 'PROFILE'
   },
 ];

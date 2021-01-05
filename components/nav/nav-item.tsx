@@ -4,6 +4,7 @@ import {View, Text, StyleSheet} from 'react-native';
 import Feather from 'react-native-vector-icons/Feather';
 
 import {DARK_GREY} from '../../constants/colors';
+import * as RootNavigation from '../../helpers/root-navigation';
 
 interface navItemProps {
   navigationLink: string
@@ -13,7 +14,11 @@ interface navItemProps {
 
 const NavItem: FC<navItemProps> = ({name, text, navigationLink}) => {
   return (
-    <View style={styles.navItemContainer}>
+    <View
+      style={styles.navItemContainer}
+      onPress={() => console.log(`navigating to ${navigationLink}`)}
+        //RootNavigation.navigate(navigationLink, { title: navigationLink })}
+    >
       <Feather
         name={name}
         size={30}
