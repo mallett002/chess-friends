@@ -16,7 +16,7 @@ const NavItem: FC<navItemProps> = ({name, text, navigationLink}) => {
     <View style={styles.navItemContainer}>
       <Feather
         name={name}
-        size={50}
+        size={30}
         color={DARK_GREY}
       />
       <Text>{text}</Text>
