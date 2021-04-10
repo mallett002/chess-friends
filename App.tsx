@@ -1,35 +1,20 @@
-import React, { FC } from 'react';
-import {
-  SafeAreaView,
-  StyleSheet,
-  Text,
-  View
-} from 'react-native';
+import * as React from 'react';
+import {NavigationContainer} from '@react-navigation/native';
+import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
+import HomeScreen from './pages/home/home-screen';
+import GamesScreen from './pages/games/games-screen';
+import ProfileScreen from './pages/profile/profile-screen';
 
-import NavFooter from './components/nav/nav-footer';
+const Tab = createBottomTabNavigator();
 
-const App: FC = () => (
-  <SafeAreaView style={styles.contentWrapper}>
-      <View>
-        <Text style={styles.header}>
-          Welcome to Chess Friends!
-      </Text>
-        <Text>Some other content</Text>
-      </View>
-    <NavFooter />
-  </SafeAreaView>
-);
-
-const styles = StyleSheet.create({
-  contentWrapper: {
-    display: "flex",
-    alignItems: "center",
-    paddingTop: 10,
-    flex: 1
-  },
-  header: {
-    fontSize: 24
-  }
-});
-
-export default App;
+export default function App() {
+  return (
+    <NavigationContainer>
+      <Tab.Navigator>
+        <Tab.Screen name="Home" component={HomeScreen} />
+        <Tab.Screen name="Games" component={GamesScreen} />
+        <Tab.Screen name="Profile" component={ProfileScreen} />
+      </Tab.Navigator>
+    </NavigationContainer>
+  );
+}
