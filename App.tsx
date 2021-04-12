@@ -1,35 +1,30 @@
-import React, { FC } from 'react';
-import {
-  SafeAreaView,
-  StyleSheet,
-  Text,
-  View
-} from 'react-native';
+import React from 'react';
+import {NavigationContainer} from '@react-navigation/native';
+import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 
-import NavFooter from './components/nav/nav-footer';
+import HomeScreen from './pages/home/home-screen';
+import GamesScreen from './pages/games/games-screen';
+import ProfileScreen from './pages/profile/profile-screen';
+import ChatsScreen from './pages/chats/chats-screen';
+import {tabScreenOptions} from './components/nav/helpers';
 
-const App: FC = () => (
-  <SafeAreaView style={styles.contentWrapper}>
-      <View>
-        <Text style={styles.header}>
-          Welcome to Chess Friends!
-      </Text>
-        <Text>Some other content</Text>
-      </View>
-    <NavFooter />
-  </SafeAreaView>
-);
+const Tab = createBottomTabNavigator();
 
-const styles = StyleSheet.create({
-  contentWrapper: {
-    display: "flex",
-    alignItems: "center",
-    paddingTop: 10,
-    flex: 1
-  },
-  header: {
-    fontSize: 24
-  }
-});
-
-export default App;
+export default function App() {
+  return (
+    <NavigationContainer>
+      <Tab.Navigator
+        screenOptions={tabScreenOptions}
+        tabBarOptions={{
+          activeTintColor: 'tomato',
+          inactiveTintColor: 'gray',
+        }}
+      >
+        <Tab.Screen name='Home' component={HomeScreen} />
+        <Tab.Screen name='Games' component={GamesScreen} />
+        <Tab.Screen name='Profile' component={ProfileScreen} />
+        <Tab.Screen name='Chats' component={ChatsScreen} />
+      </Tab.Navigator>
+    </NavigationContainer>
+  );
+}
